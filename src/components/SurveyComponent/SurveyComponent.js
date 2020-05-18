@@ -126,10 +126,7 @@ const SurveyComponent = (props) => {
       )}
       {Boolean(survey) && (
         <>
-          {currentStep === steps && !isDone && (
-            <div className="survey-widget__message">Thank You</div>
-          )}
-          {isDone && <StepDone/>}
+          {(currentStep === steps || isDone) && <StepDone/>}
         </>
       )}
     </div>
